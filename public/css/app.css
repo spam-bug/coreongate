@@ -1,0 +1,1025 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap);
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #13a7be;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.card {
+  width: 1000px;
+  height: 600px;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+}
+
+.clientForm {
+  width: 500px;
+  height: 600px;
+}
+.clientForm header {
+  width: 100%;
+  padding: 20px;
+}
+.clientForm header .logo {
+  width: 200px;
+}
+.clientForm nav {
+  width: 400px;
+  margin: 20px auto 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.clientForm nav .links {
+  font-size: 18px;
+  font-weight: 900;
+  color: #000000;
+  text-transform: uppercase;
+}
+.clientForm nav .links.active, .clientForm nav .links:hover {
+  color: #009345;
+}
+.clientForm main {
+  width: 400px;
+  margin: 80px auto 0px;
+}
+
+.adsWrapper {
+  width: 500px;
+  height: 600px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  display: flex;
+  overflow: hidden;
+}
+.adsWrapper .ads {
+  width: 500px;
+  height: 600px;
+  transition: all 2s ease;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.adsWrapper .radio {
+  display: none;
+}
+
+#forgotPasswordLink {
+  display: inline-block;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.wave {
+  width: 120%;
+  position: absolute;
+  bottom: -20px;
+  left: -15px;
+}
+
+#signupForm {
+  width: 1000px;
+  min-height: 600px;
+  display: flex;
+  padding: 50px 0px;
+  border-radius: 30px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 110;
+  transition: all 1s linear;
+  opacity: 0;
+}
+#signupForm.active {
+  opacity: 1;
+  top: 50%;
+}
+#signupForm header {
+  font-size: 20px;
+  color: #014129;
+}
+#signupForm #left,
+#signupForm #right {
+  width: 100%;
+  padding: 0px 50px;
+}
+#signupForm #left {
+  border-right: 1px solid #707070;
+}
+#signupForm .button-group {
+  margin-top: 35px;
+}
+#signupForm .button-group .cg-btn:first-child {
+  margin-right: 10px;
+}
+
+input[type=date] {
+  text-transform: lowercase;
+  border-radius: 4px;
+}
+
+.button-group {
+  width: 100%;
+  display: flex;
+}
+
+.app {
+  display: flex;
+}
+.app .body {
+  width: calc(100% - 250px);
+  background: #ecf2f7;
+  position: relative;
+}
+.app .body header {
+  width: 100%;
+  height: 60px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 0px 20px;
+  font-size: 20px;
+}
+.app .body main {
+  width: 100%;
+  height: calc(100% - 60px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 25px;
+}
+
+.sidebar {
+  width: 250px;
+  background: #009345;
+}
+.sidebar .logoWrapper {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+.sidebar .logoWrapper img {
+  width: 100%;
+}
+.sidebar .sidebarMenu {
+  margin-top: 50px;
+  padding: 0px 20px;
+}
+.sidebar .sidebarMenu .sidebarLinks {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  margin: 5px 0px;
+  color: #ffffff;
+  border-radius: 5px;
+}
+.sidebar .sidebarMenu .sidebarLinks:hover, .sidebar .sidebarMenu .sidebarLinks.active {
+  background: #ffffff;
+  color: #014129;
+}
+.sidebar .sidebarMenu .hr {
+  width: 100%;
+  height: 1px;
+  background: #006266;
+  margin: 20px 0px;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.settings {
+  display: inline-block;
+  width: 200px;
+  padding: 20px;
+  border-radius: 15px;
+  background: #ffffff;
+  text-align: center;
+  color: #014129;
+  transition: all 0.3s linear;
+}
+.settings i.fas {
+  display: block;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.settings span {
+  font-size: 20px;
+}
+.settings:hover {
+  background: #014129;
+  color: #ffffff;
+  transform: scale(1.1);
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
+}
+
+.form {
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
+}
+
+.planForm {
+  max-width: 350px;
+}
+
+.numberInput {
+  width: 100%;
+  margin: 15px 0px;
+}
+.numberInput label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.numberInput .inputWrapper {
+  display: flex;
+}
+.numberInput .inputWrapper input[type=number] {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  border: 2px solid #707070;
+  border-radius: 4px;
+  outline: none;
+}
+.numberInput .inputWrapper input[type=number]:focus {
+  border-color: #0984e3;
+}
+.numberInput .inputWrapper input[type=number]:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+.numberInput .inputWrapper .checkbox {
+  display: flex;
+  align-items: center;
+}
+.numberInput .inputWrapper .checkbox input {
+  margin-right: 10px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.tableWrapper {
+  width: 100%;
+  background: #ffffff;
+  padding: 20px 0px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
+}
+
+.planTableWrapper {
+  width: calc(100% - 400px);
+}
+
+.table {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  border-collapse: collapse;
+  border-top: 1px solid #707070;
+  border-bottom: 1px solid #707070;
+  margin: 20px 0px;
+}
+
+tbody tr:nth-child(odd) {
+  background: #f2f5fa;
+}
+
+.row {
+  background: #ffffff;
+  color: #014129;
+}
+.row .column .action {
+  display: flex;
+}
+.row .column .edit,
+.row .column .trash {
+  cursor: pointer;
+}
+.row .column .edit {
+  color: #0984e3;
+}
+.row .column .trash {
+  color: #d63031;
+  margin-left: 10px;
+}
+.row .column,
+.row .header {
+  text-align: left;
+  padding: 20px;
+}
+
+#clientsTable {
+  border: none;
+}
+
+#planTable {
+  width: 100%;
+  margin-top: 50px;
+}
+#planTable .row .column {
+  font-weight: 700;
+}
+#planTable .row .column,
+#planTable .row .header {
+  padding: 20px 50px;
+}
+
+.searchBar {
+  width: 100%;
+  padding: 0px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.searchBar .searchInput {
+  width: 500px;
+  height: 40px;
+  padding: 10px;
+  border: 2px solid #707070;
+  border-radius: 4px;
+  outline: none;
+  font-size: 16px;
+  font-weight: 700;
+  color: #014129;
+}
+.searchBar .searchInput:focus {
+  border-color: #0984e3;
+}
+.searchBar .searchBtn {
+  width: 100px;
+  height: 40px;
+  border: none;
+  background: #009345;
+  color: #ffffff;
+  font-size: 16px;
+  margin-left: 10px;
+  cursor: pointer;
+  outline: none;
+}
+.searchBar .searchBtn:active {
+  background: #014129;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.planEditForm {
+  max-width: 400px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 1s linear;
+}
+.planEditForm.active {
+  top: 10%;
+}
+
+#topupForm {
+  width: 1000px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  color: #014129;
+}
+#topupForm #clientSearch {
+  width: 100%;
+  position: relative;
+}
+#topupForm #clientSearch input {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #014129;
+  border: 2px solid #707070;
+  border-radius: 4px;
+  outline: none;
+}
+#topupForm #clientSearch input:focus {
+  border-color: #0984e3;
+}
+#topupForm #clientSearch #searchHint {
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  z-index: 150;
+}
+#topupForm #clientSearch #searchHint p {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+#topupForm section {
+  width: 100%;
+}
+#topupForm section header {
+  font-weight: 700;
+}
+#topupForm .info {
+  display: flex;
+  padding: 0px 50px;
+}
+#topupForm .info .labels {
+  width: 200px;
+}
+#topupForm .info .labels .label {
+  padding: 5px 0px;
+}
+#topupForm .info .data .text {
+  padding: 5px 0px;
+  font-weight: 700;
+}
+#topupForm #infoWrapper {
+  width: 100%;
+}
+#topupForm #choosePlan {
+  display: flex;
+  align-items: center;
+}
+#topupForm #choosePlan header {
+  width: 200px;
+}
+#topupForm #choosePlan #planSelect {
+  width: 200px;
+  height: 30px;
+  outline: none;
+  border: 2px solid #707070;
+  border-radius: 4px;
+}
+#topupForm #choosePlan #planSelect:focus {
+  border-color: #0984e3;
+}
+#topupForm .planInfoWrapper {
+  display: flex;
+  align-items: center;
+}
+#topupForm .planInfoWrapper .data {
+  width: 200px;
+}
+#topupForm .planInfoWrapper .voucher {
+  width: 100%;
+}
+#topupForm .planInfoWrapper .voucher .cg-textfield {
+  width: 100%;
+}
+#topupForm .topUpBtn {
+  margin-top: 20px;
+}
+#topupForm .topUpBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.clientCardWrapper {
+  width: 100%;
+  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.clientCardWrapper .activeClientCard {
+  width: 450px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
+  color: #014129;
+}
+.clientCardWrapper .activeClientCard .header {
+  display: flex;
+  justify-content: space-between;
+}
+.clientCardWrapper .activeClientCard .header .checkOut {
+  cursor: pointer;
+}
+.clientCardWrapper .activeClientCard .credentials {
+  display: flex;
+}
+.clientCardWrapper .activeClientCard .credentials .labels {
+  width: 160px;
+}
+.clientCardWrapper .activeClientCard .credentials .labels p {
+  margin: 5px 0px;
+}
+.clientCardWrapper .activeClientCard .credentials .data p {
+  margin: 5px 0px;
+  font-weight: 700;
+}
+.clientCardWrapper .noClient {
+  width: 100%;
+}
+.clientCardWrapper .noClient p {
+  text-align: center;
+}
+
+.loginWrapper {
+  width: 100%;
+  height: 100vh;
+  background-color: #f6f6f6;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 100px;
+}
+.loginWrapper .logo {
+  width: 150px;
+}
+.loginWrapper .loginCard {
+  width: 400px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
+  margin-top: 50px;
+}
+.loginWrapper .loginCard .header {
+  padding: 15px;
+  border-bottom: 1px solid #707070;
+}
+.loginWrapper .loginCard .header p {
+  text-align: center;
+  color: #014129;
+}
+.loginWrapper .loginCard .content {
+  padding: 20px;
+}
+.loginWrapper .loginCard .content .errorLogin {
+  width: 100%;
+  background: #d63031;
+  padding: 10px;
+}
+.loginWrapper .loginCard .content .errorLogin p {
+  color: #ffffff;
+  text-align: center;
+}
+.loginWrapper .loginCard .content .button-group {
+  justify-content: space-between;
+}
+.loginWrapper .loginCard .content .button-group .cg-btn {
+  max-width: 175px;
+}
+.loginWrapper .loginCard .content .button-group .cg-btn-link {
+  max-width: 175px;
+}
+
+.monitoring {
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #f6f6f6;
+  padding: 50px;
+}
+.monitoring .actions {
+  display: flex;
+}
+.monitoring .actions .links {
+  margin-left: auto;
+  width: 420px;
+  display: flex;
+}
+.monitoring .actions .links .cg-btn-link {
+  margin-left: 10px;
+}
+
+.counterWrapper {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+
+.counterCard {
+  width: 200px;
+  padding: 20px;
+  border-radius: 10px;
+  background: #ffffff;
+  text-align: center;
+}
+.counterCard .label {
+  font-weight: 700;
+  color: #014129;
+}
+.counterCard .counter {
+  font-size: 30px;
+  font-weight: 700;
+  color: #014129;
+  margin-top: 15px;
+}
+
+hr {
+  margin: 20px 0px;
+}
+
+.adSettings {
+  margin-top: 20px;
+}
+.adSettings #adsCreate {
+  width: 200px;
+  height: 300px;
+  border: none;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.5s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+}
+.adSettings #adsCreate #addIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid #014129;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.adSettings #adsCreate #addIcon .fas {
+  font-size: 30px;
+  color: #014129;
+}
+.adSettings #adsCreate:hover {
+  transform: scale(1.1);
+}
+.adSettings #imgUpload {
+  display: none;
+}
+.adSettings .adsContainer {
+  width: 200px;
+  height: 300px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.5s ease;
+  overflow: hidden;
+  position: relative;
+}
+.adSettings .adsContainer img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.adSettings .adsContainer #adsDelete {
+  position: absolute;
+  display: block;
+  width: 200px;
+  height: 300px;
+  text-align: center;
+  line-height: 300px;
+  top: 0px;
+  left: 0px;
+  background: rgba(0, 0, 0, 0.5);
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+.adSettings .adsContainer #adsDelete .fas {
+  font-size: 40px;
+  color: #d63031;
+}
+.adSettings .adsContainer:hover {
+  transform: scale(1.1);
+}
+.adSettings .adsContainer:hover #adsDelete {
+  opacity: 1;
+}
+
+#forgotPassword {
+  width: 500px;
+  background: #ffffff;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 150;
+  border-radius: 10px;
+}
+#forgotPassword .header {
+  padding: 15px;
+  font-size: 20px;
+  font-weight: 700;
+  border-bottom: 1px solid #707070;
+}
+#forgotPassword .forgotPasswordForm {
+  box-shadow: none;
+  padding: 15px;
+}
+#forgotPassword .forgotPasswordForm #input {
+  display: flex;
+}
+#forgotPassword .forgotPasswordForm #input .cg-btn {
+  width: 100px;
+  margin: 36px 0px 0px 10px;
+}
+
+#resetPassword {
+  padding: 20px;
+}
+
+.reportsWrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+.reportsWrapper form {
+  display: flex;
+  justify-content: flex-end;
+}
+.reportsWrapper .dateFilter {
+  display: flex;
+}
+.reportsWrapper .dateFilter .cg-textfield {
+  margin-left: 10px;
+  width: 200px;
+}
+.reportsWrapper .cg-btn {
+  display: inline-block;
+  width: 200px;
+  margin-top: 36px;
+  margin-left: 10px;
+}
+
+.codeTimer {
+  width: 100%;
+  text-align: center;
+}
+.codeTimer button {
+  background: none;
+  border: none;
+  text-decoration: underline;
+  color: #13a7be;
+  cursor: pointer;
+}
+
+#clientEditForm {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 20px 40px 40px;
+  border-radius: 10px;
+}
+#clientEditForm #section {
+  width: 100%;
+  display: flex;
+}
+#clientEditForm #section #left,
+#clientEditForm #section #right {
+  width: 100%;
+}
+#clientEditForm #section #left {
+  margin-right: 20px;
+}
+#clientEditForm #section #right {
+  margin-left: 20px;
+}
+#clientEditForm .cg-btn {
+  margin-top: 20px;
+}
+
+.paginationWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0px 20px;
+}
+.paginationWrapper .links {
+  display: inline-block;
+  width: 80px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  background: #ffffff;
+  border: 1px solid #707070;
+  color: #014129;
+  font-weight: 700;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.paginationWrapper .links.disabled {
+  background: #edf2f8;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+.paginationWrapper p.text {
+  margin-right: 5px;
+}
+
+.alert {
+  min-width: 300px;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 120;
+}
+.alert-success {
+  color: #009345;
+}
+.alert-danger {
+  color: #d63031;
+}
+.alert #content {
+  border-bottom: 1px solid #707070;
+  padding: 20px;
+}
+.alert #content .message {
+  text-align: center;
+  font-weight: 700;
+}
+.alert #content .planInfo {
+  display: flex;
+}
+.alert #content .planInfo .label {
+  margin: 5px 0px;
+}
+.alert #content .planInfo .data {
+  margin-left: 20px;
+}
+.alert #content .planInfo .data .text {
+  margin: 5px 0px;
+  font-weight: 700;
+}
+.alert #action {
+  text-align: center;
+  padding: 10px;
+}
+.alert #action #ok {
+  background: none;
+  border: none;
+  font-weight: 900;
+  cursor: pointer;
+  outline: none;
+}
+
+.cg-textfield {
+  width: 100%;
+  margin: 15px 0px;
+}
+.cg-textfield label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.cg-textfield input {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  outline: none;
+  border: 2px solid #707070;
+  border-radius: 4px;
+  color: #014129;
+}
+.cg-textfield input:focus {
+  border-color: #0984e3;
+}
+.cg-textfield .error {
+  font-size: 12px;
+  color: #d63031;
+}
+
+.error {
+  font-size: 12px;
+  color: #d63031;
+}
+
+.cg-textarea {
+  width: 100%;
+  margin: 15px 0px;
+}
+.cg-textarea label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.cg-textarea textarea {
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 80px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  outline: none;
+  border: 2px solid #707070;
+  color: #014129;
+}
+.cg-textarea textarea:focus {
+  border-color: #0984e3;
+}
+.cg-textarea .error {
+  font-size: 12px;
+  color: #d63031;
+}
+
+.cg-btn {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.cg-btn-submit {
+  background: #009345;
+  color: #ffffff;
+}
+.cg-btn-submit:hover, .cg-btn-submit:active {
+  background: #014129;
+  color: #ffffff;
+}
+.cg-btn-danger {
+  background-color: #d63031;
+  color: #ffffff;
+}
+.cg-btn:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.cg-btn-link {
+  display: inline-block;
+  width: 100%;
+  height: 50px;
+  border-radius: 4px;
+  line-height: 50px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.cg-btn-link-danger {
+  background-color: #d63031;
+  color: #ffffff;
+  font-weight: 700;
+}
+.cg-btn-link-primary {
+  background: #009345;
+  color: #ffffff;
+}
+.cg-btn-link-primary:focus {
+  background: #014129;
+}

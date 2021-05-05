@@ -1,0 +1,1184 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font;
+}
+
+a {
+    text-decoration: none;
+    color: $cyan;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+// .client {
+//     background: $primary;
+// }
+
+.card {
+    width: 1000px;
+    height: 600px;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: $white;
+    border-radius: 30px;
+    box-shadow: $boxShadow;
+    z-index: 100;
+}
+
+.clientForm {
+    width: 500px;
+    height: 600px;
+
+    header {
+        width: 100%;
+        padding: 20px;
+
+        .logo {
+            width: 200px;
+        }
+    }
+
+    nav {
+        width: 400px;
+        margin: 20px auto 0px;
+        display: flex;
+        justify-content: space-between;
+
+        .links {
+            font-size: 18px;
+            font-weight: 900;
+            color: $black;
+            text-transform: uppercase;
+
+            &.active,
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+
+    main {
+        width: 400px;
+        margin: 80px auto 0px;
+    }
+}
+
+.adsWrapper {
+    width: 500px;
+    height: 600px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    display: flex;
+    overflow: hidden;
+
+    .ads {
+        width: 500px;
+        height: 600px;
+        transition: all 2s ease;
+        object-fit: cover;
+    }
+
+    .radio {
+        display: none;
+    }
+}
+
+#forgotPasswordLink {
+    display: inline-block;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.wave {
+    width: 120%;
+    position: absolute;
+    bottom: -20px;
+    left: -15px;
+}
+
+#signupForm {
+    width: 1000px;
+    min-height: 600px;
+    display: flex;
+    padding: 50px 0px;
+    border-radius: 30px;
+    background-color: $white;
+    box-shadow: $boxShadow;
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 110;
+    transition: all 1s linear;
+    opacity: 0;
+
+    &.active {
+        opacity: 1;
+        top: 50%;
+    }
+
+    header {
+        font-size: 20px;
+        color: $darkGreen;
+    }
+
+    #left,
+    #right {
+        width: 100%;
+        padding: 0px 50px;
+    }
+
+    #left {
+        border-right: 1px solid $darkGray;
+    }
+
+    .button-group {
+        margin-top: 35px;
+
+        .cg-btn {
+            &:first-child {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+input[type="date"] {
+    text-transform: lowercase;
+    border-radius: 4px;
+}
+
+.button-group {
+    width: 100%;
+    display: flex;
+}
+
+.app {
+    display: flex;
+
+    .body {
+        width: calc(100% - 250px);
+        background: #ecf2f7;
+        position: relative;
+
+        header {
+            width: 100%;
+            height: 60px;
+            background: $white;
+            display: flex;
+            align-items: center;
+            padding: 0px 20px;
+            font-size: 20px;
+        }
+
+        main {
+            width: 100%;
+            height: calc(100% - 60px);
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding: 25px;
+        }
+    }
+}
+
+.sidebar {
+    width: 250px;
+    background: $primary;
+
+    .logoWrapper {
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .sidebarMenu {
+        margin-top: 50px;
+        padding: 0px 20px;
+
+        .sidebarLinks {
+            display: block;
+            width: 100%;
+            padding: 10px 20px;
+            margin: 5px 0px;
+            color: $white;
+            border-radius: 5px;
+
+            &:hover,
+            &.active {
+                background: $white;
+                color: $darkGreen;
+            }
+        }
+
+        .hr {
+            width: 100%;
+            height: 1px;
+            background: #006266;
+            margin: 20px 0px;
+        }
+    }
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.settings {
+    display: inline-block;
+    width: 200px;
+    padding: 20px;
+    border-radius: 15px;
+    background: $white;
+    text-align: center;
+    color: $darkGreen;
+    transition: all 0.3s linear;
+
+    i.fas {
+        display: block;
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+
+    span {
+        font-size: 20px;
+    }
+
+    &:hover {
+        background: $darkGreen;
+        color: $white;
+        transform: scale(1.1);
+        box-shadow: $boxShadow;
+    }
+}
+
+.form {
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    background: $white;
+    box-shadow: $boxShadow;
+}
+
+.planForm {
+    max-width: 350px;
+}
+
+.numberInput {
+    width: 100%;
+    margin: 15px 0px;
+
+    label {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .inputWrapper {
+        display: flex;
+
+        input[type="number"] {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 700;
+            border: 2px solid $darkGray;
+            border-radius: 4px;
+            outline: none;
+
+            &:focus {
+                border-color: $blue;
+            }
+
+            &:disabled {
+                opacity: 0.7;
+                cursor: not-allowed;
+            }
+        }
+
+        .checkbox {
+            display: flex;
+            align-items: center;
+
+            input {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.tableWrapper {
+    width: 100%;
+    background: $white;
+    padding: 20px 0px;
+    border-radius: 10px;
+    box-shadow: $boxShadow;
+}
+
+.planTableWrapper {
+    width: calc(100% - 400px);
+}
+
+.table {
+    width: 100%;
+    background: $white;
+    border-radius: 10px;
+    padding: 20px;
+    border-collapse: collapse;
+    border-top: 1px solid $darkGray;
+    border-bottom: 1px solid $darkGray;
+    margin: 20px 0px;
+}
+
+tbody tr:nth-child(odd) {
+    background: #f2f5fa;
+}
+
+.row {
+    background: $white;
+    color: $darkGreen;
+
+    .column {
+        .action {
+            display: flex;
+        }
+
+        .edit,
+        .trash {
+            cursor: pointer;
+        }
+
+        .edit {
+            color: $blue;
+        }
+
+        .trash {
+            color: $danger;
+            margin-left: 10px;
+        }
+    }
+
+    .column,
+    .header {
+        text-align: left;
+        padding: 20px;
+    }
+}
+
+#clientsTable {
+    border: none;
+}
+
+#planTable {
+    width: 100%;
+    margin-top: 50px;
+
+    .row {
+        .column {
+            font-weight: 700;
+        }
+
+        .column,
+        .header {
+            padding: 20px 50px;
+        }
+    }
+}
+
+.searchBar {
+    width: 100%;
+    padding: 0px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .searchInput {
+        width: 500px;
+        height: 40px;
+        padding: 10px;
+        border: 2px solid $darkGray;
+        border-radius: 4px;
+        outline: none;
+        font-size: 16px;
+        font-weight: 700;
+        color: $darkGreen;
+
+        &:focus {
+            border-color: $blue;
+        }
+    }
+
+    .searchBtn {
+        width: 100px;
+        height: 40px;
+        border: none;
+        background: $primary;
+        color: $white;
+        font-size: 16px;
+        margin-left: 10px;
+        cursor: pointer;
+        outline: none;
+
+        &:active {
+            background: $darkGreen;
+        }
+    }
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.planEditForm {
+    max-width: 400px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 1s linear;
+
+    &.active {
+        top: 10%;
+    }
+}
+
+#topupForm {
+    width: 1000px;
+    background: $white;
+    padding: 30px;
+    border-radius: 10px;
+    color: $darkGreen;
+
+    #clientSearch {
+        width: 100%;
+        position: relative;
+
+        input {
+            width: 100%;
+            height: 50px;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: 700;
+            color: $darkGreen;
+            border: 2px solid $darkGray;
+            border-radius: 4px;
+            outline: none;
+
+            &:focus {
+                border-color: $blue;
+            }
+        }
+
+        #searchHint {
+            width: 100%;
+            background: $white;
+            box-shadow: $boxShadow;
+            position: absolute;
+            z-index: 150;
+
+            p {
+                padding: 10px 20px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    section {
+        width: 100%;
+
+        header {
+            font-weight: 700;
+        }
+    }
+
+    .info {
+        display: flex;
+        padding: 0px 50px;
+
+        .labels {
+            width: 200px;
+
+            .label {
+                padding: 5px 0px;
+            }
+        }
+
+        .data {
+            .text {
+                padding: 5px 0px;
+                font-weight: 700;
+            }
+        }
+    }
+
+    #infoWrapper {
+        width: 100%;
+    }
+
+    #choosePlan {
+        display: flex;
+        align-items: center;
+
+        header {
+            width: 200px;
+        }
+
+        #planSelect {
+            width: 200px;
+            height: 30px;
+            outline: none;
+            border: 2px solid $darkGray;
+            border-radius: 4px;
+
+            &:focus {
+                border-color: $blue;
+            }
+        }
+    }
+
+    .planInfoWrapper {
+        display: flex;
+        align-items: center;
+
+        .data {
+            width: 200px;
+        }
+
+        .voucher {
+            width: 100%;
+
+            .cg-textfield {
+                width: 100%;
+            }
+        }
+    }
+
+    .topUpBtn {
+        margin-top: 20px;
+
+        &:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+    }
+}
+
+.clientCardWrapper {
+    width: 100%;
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+
+    .activeClientCard {
+        width: 450px;
+        background: $white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: $boxShadow;
+        color: $darkGreen;
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+
+            .checkOut {
+                cursor: pointer;
+            }
+        }
+
+        .credentials {
+            display: flex;
+
+            .labels {
+                width: 160px;
+
+                p {
+                    margin: 5px 0px;
+                }
+            }
+
+            .data {
+                p {
+                    margin: 5px 0px;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+    .noClient {
+        width: 100%;
+        p {
+            text-align: center;
+        }
+    }
+}
+
+.loginWrapper {
+    width: 100%;
+    height: 100vh;
+    background-color: #f6f6f6;
+    overflow: hidden;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 100px;
+
+    .logo {
+        width: 150px;
+    }
+
+    .loginCard {
+        width: 400px;
+        border-radius: 20px;
+        background-color: $white;
+        box-shadow: $boxShadow;
+        margin-top: 50px;
+
+        .header {
+            padding: 15px;
+            border-bottom: 1px solid $darkGray;
+
+            p {
+                text-align: center;
+                color: $darkGreen;
+            }
+        }
+
+        .content {
+            padding: 20px;
+
+            .errorLogin {
+                width: 100%;
+                background: $danger;
+                padding: 10px;
+
+                p {
+                    color: $white;
+                    text-align: center;
+                }
+            }
+
+            .button-group {
+                justify-content: space-between;
+
+                .cg-btn {
+                    max-width: 175px;
+                }
+
+                .cg-btn-link {
+                    max-width: 175px;
+                }
+            }
+        }
+    }
+}
+
+.monitoring {
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #f6f6f6;
+    padding: 50px;
+
+    .actions {
+        display: flex;
+
+        .links {
+            margin-left: auto;
+            width: 420px;
+            display: flex;
+
+            .cg-btn-link {
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+.counterWrapper {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+
+.counterCard {
+    width: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    background: $white;
+    text-align: center;
+
+    .label {
+        font-weight: 700;
+        color: $darkGreen;
+    }
+
+    .counter {
+        font-size: 30px;
+        font-weight: 700;
+        color: $darkGreen;
+        margin-top: 15px;
+    }
+}
+
+hr {
+    margin: 20px 0px;
+}
+
+.adSettings {
+    margin-top: 20px;
+
+    #adsCreate {
+        width: 200px;
+        height: 300px;
+        border: none;
+        border-radius: 10px;
+        background: $white;
+        box-shadow: $boxShadow;
+        transition: all 0.5s ease;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: none;
+
+        #addIcon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 3px solid $darkGreen;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .fas {
+                font-size: 30px;
+                color: $darkGreen;
+            }
+        }
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    #imgUpload {
+        display: none;
+    }
+
+    .adsContainer {
+        width: 200px;
+        height: 300px;
+        border-radius: 10px;
+        background: $white;
+        box-shadow: $boxShadow;
+        transition: all 0.5s ease;
+        overflow: hidden;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        #adsDelete {
+            position: absolute;
+            display: block;
+            width: 200px;
+            height: 300px;
+            text-align: center;
+            line-height: 300px;
+            top: 0px;
+            left: 0px;
+            background: rgba(0, 0, 0, 0.5);
+            transition: all 0.5s ease;
+            opacity: 0;
+
+            .fas {
+                font-size: 40px;
+                color: $danger;
+            }
+        }
+
+        &:hover {
+            transform: scale(1.1);
+
+            #adsDelete {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+#forgotPassword {
+    width: 500px;
+    background: $white;
+    box-shadow: $boxShadow;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 150;
+    border-radius: 10px;
+
+    .header {
+        padding: 15px;
+        font-size: 20px;
+        font-weight: 700;
+        border-bottom: 1px solid $darkGray;
+    }
+
+    .forgotPasswordForm {
+        box-shadow: none;
+        padding: 15px;
+
+        #input {
+            display: flex;
+
+            .cg-btn {
+                width: 100px;
+                margin: 36px 0px 0px 10px;
+            }
+        }
+    }
+}
+
+#resetPassword {
+    padding: 20px;
+}
+
+.reportsWrapper {
+    display: flex;
+    justify-content: flex-end;
+
+    form {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .dateFilter {
+        display: flex;
+
+        .cg-textfield {
+            margin-left: 10px;
+            width: 200px;
+        }
+    }
+
+    .cg-btn {
+        display: inline-block;
+        width: 200px;
+        margin-top: 36px;
+        margin-left: 10px;
+    }
+}
+
+.codeTimer {
+    width: 100%;
+    text-align: center;
+
+    button {
+        background: none;
+        border: none;
+        text-decoration: underline;
+        color: $cyan;
+        cursor: pointer;
+    }
+}
+
+#clientEditForm {
+    width: 100%;
+    background-color: $white;
+    padding: 20px 40px 40px;
+    border-radius: 10px;
+
+    #section {
+        width: 100%;
+        display: flex;
+
+        #left,
+        #right {
+            width: 100%;
+        }
+
+        #left {
+            margin-right: 20px;
+        }
+
+        #right {
+            margin-left: 20px;
+        }
+    }
+
+    .cg-btn {
+        margin-top: 20px;
+    }
+}
+
+//components
+
+.paginationWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px 20px;
+
+    .links {
+        display: inline-block;
+        width: 80px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        background: $white;
+        border: 1px solid $darkGray;
+        color: $darkGreen;
+        font-weight: 700;
+        cursor: pointer;
+        margin-left: 10px;
+
+        &.disabled {
+            background: #edf2f8;
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+    }
+
+    p.text {
+        margin-right: 5px;
+    }
+}
+
+.alert {
+    min-width: 300px;
+    border-radius: 15px;
+    background: $white;
+    box-shadow: $boxShadow;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 120;
+
+    &-success {
+        color: $primary;
+    }
+
+    &-danger {
+        color: $danger;
+    }
+
+    #content {
+        border-bottom: 1px solid $darkGray;
+        padding: 20px;
+
+        .message {
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .planInfo {
+            display: flex;
+
+            .label {
+                margin: 5px 0px;
+            }
+
+            .data {
+                margin-left: 20px;
+
+                .text {
+                    margin: 5px 0px;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+    #action {
+        text-align: center;
+        padding: 10px;
+
+        #ok {
+            background: none;
+            border: none;
+            font-weight: 900;
+            cursor: pointer;
+            outline: none;
+        }
+    }
+}
+
+.cg-textfield {
+    width: 100%;
+    margin: 15px 0px;
+
+    label {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    input {
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: 700;
+        outline: none;
+        border: 2px solid $darkGray;
+        border-radius: 4px;
+        color: $darkGreen;
+
+        &:focus {
+            border-color: $blue;
+        }
+    }
+
+    .error {
+        font-size: 12px;
+        color: $danger;
+    }
+}
+
+.error {
+    font-size: 12px;
+    color: $danger;
+}
+
+.cg-textarea {
+    width: 100%;
+    margin: 15px 0px;
+
+    label {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    textarea {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        min-height: 80px;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: 700;
+        outline: none;
+        border: 2px solid $darkGray;
+        color: $darkGreen;
+
+        &:focus {
+            border-color: $blue;
+        }
+    }
+
+    .error {
+        font-size: 12px;
+        color: $danger;
+    }
+}
+
+.cg-btn {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+
+    &-submit {
+        background: $primary;
+        color: $white;
+
+        &:hover,
+        &:active {
+            background: $darkGreen;
+            color: $white;
+        }
+    }
+
+    &-danger {
+        background-color: $danger;
+        color: $white;
+    }
+
+    &:disabled {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+}
+
+.cg-btn-link {
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    border-radius: 4px;
+    line-height: 50px;
+    text-transform: uppercase;
+    text-align: center;
+
+    &-danger {
+        background-color: $danger;
+        color: $white;
+        font-weight: 700;
+    }
+
+    &-primary {
+        background: $primary;
+        color: $white;
+
+        &:focus {
+            background: $darkGreen;
+        }
+    }
+}
